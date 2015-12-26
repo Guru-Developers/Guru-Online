@@ -5,4 +5,4 @@
 
 #Select from a patient in the table and view patient specific information including devices and annotiations
 $ ->
-  alert "testing coffee"
+#  alert "testing coffee"
