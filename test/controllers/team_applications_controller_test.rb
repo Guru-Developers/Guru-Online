@@ -1,13 +1,15 @@
 require 'test_helper'
 
 class TeamApplicationsControllerTest < ActionController::TestCase
-  test "should get index" do
-    get :index
-    assert_response :success
-  end
 
   test "should get new" do
     get :new
+    assert_response :success
+  end
+
+=begin
+  test "should get index" do
+    get :index
     assert_response :success
   end
 
@@ -20,5 +22,6 @@ class TeamApplicationsControllerTest < ActionController::TestCase
     get :show
     assert_response :success
   end
+=end
 
 end
