@@ -6,20 +6,25 @@
 #   cities = City.create([{ name: 'Chicago' }, { name: 'Copenhagen' }])
 #   Mayor.create(name: 'Emanuel', city: cities.first)
 
-TeamApplication.create!(first_name: "Kammy",
-			last_name: "Liu",
-			email: "kammy@example.com",
-			date_of_birth: Date.today,
-			attends_unc: true,
-			resume: "insert file location here")
 
-Proposal.create!(first_name: "Kammy",
-			last_name: "Liu",
-			email: "kammy@example.com",
-			message: "Awesome startup things")
+5.times do 
+  TeamApplication.create!(first_name: Faker::Name.first_name,
+			last_name: Faker::Name.last_name,
+			email: Faker::Internet.email, 
+			date_of_birth: Faker::Date.backward(100),
+			resume: Rails.root.join("public/uploads/tmp/blank.pdf").open)
+end 
 
-Message.create!(email: "kammy@example.com",
-			message: "I have a question about things?")
+5.times do 
+  Proposal.create!(	first_name: Faker::Name.first_name,
+			last_name: Faker::Name.last_name,
+			email: Faker::Internet.email, 
+			message: Faker::Lorem.paragraph )
+end 
 
+5.times do
+  Message.create!(email: Faker::Internet.email,
+		message: Faker::Lorem.paragraph )
 
+end
 

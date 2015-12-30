@@ -5,4 +5,8 @@ class TeamApplication < ActiveRecord::Base
   validates :date_of_birth, presence: true
   validates :resume, presence: true
 
+  mount_uploader :resume, FileSubmissionUploader
+
+  default_scope -> { order(created_at: :desc) }
+
 end

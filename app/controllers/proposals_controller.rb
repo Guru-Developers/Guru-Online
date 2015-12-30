@@ -1,7 +1,8 @@
 class ProposalsController < ApplicationController
 
+
   def index
-    @proposals = Proposal.all
+    @proposals = Proposal.paginate(page: params[:page])
   end
 
   def new

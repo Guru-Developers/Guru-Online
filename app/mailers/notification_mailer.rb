@@ -1,8 +1,12 @@
 class NotificationMailer < ApplicationMailer
-  default to: 'liuk@live.unc.edu'   #change to dev team email later
+  default from: 'localhost:3000', to: 'liuk@live.unc.edu'   #change to dev team email later
 
   def proposal(proposal)
     @proposal = proposal
+    pitch_deck = proposal.pitch_deck
+    unless pitch_deck.nil? || pitch_deck.length==0
+      attachments[pitch_deck.identifier] = File.read(pitch_deck.current_path)
+    end
     mail subject: "New project proposal"
   end
 

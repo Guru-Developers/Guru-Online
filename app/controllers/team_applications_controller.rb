@@ -1,6 +1,6 @@
 class TeamApplicationsController < ApplicationController
   def index
-    @applications = TeamApplication.all
+    @applications = TeamApplication.paginate(page: params[:page])
   end
 
   def new
