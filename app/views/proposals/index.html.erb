@@ -1,0 +1,16 @@
+<h1>Proposals#index</h1>
+<p>Find me in app/views/proposals/index.html.erb</p>
+
+<%= will_paginate %>
+
+<% @proposals.each do |p| %>
+
+    <div class="well">
+      <%= render 'proposal', p: p%>
+      <%= link_to "Permalink", proposal_path(p), class: "btn btn-primary"  %>
+    </div>
+
+<% end %>
+
+<%= will_paginate %>
+

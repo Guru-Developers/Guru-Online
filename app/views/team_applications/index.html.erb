@@ -1,0 +1,15 @@
+<h1>TeamApplications#index</h1>
+<p>Find me in app/views/team_applications/index.html.erb</p>
+
+<%= will_paginate %>
+
+<% @team_applications.each do |a| %>
+
+  <div class="well">
+    <%= render 'team_application', a: a%>
+    <%= link_to "Permalink", team_application_path(a), class: "btn btn-primary"    %>
+  </div>
+<% end %>
+
+<%= will_paginate %>
+

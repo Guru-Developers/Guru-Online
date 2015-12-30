@@ -1,15 +1,16 @@
 Rails.application.routes.draw do
 
-
   # The priority is based upon order of creation: first created -> highest priority.
-  # See how all your routes lay out with "rake routes".
 
-  # You can have the root of your site routed with "root"
   root 'static_pages#home'
   get 'team' 		=> 'static_pages#team'
   get 'portfolio' 	=> 'static_pages#portfolio'
-  get 'contact' 	=> 'static_pages#contact'
-  get 'join' 		=> 'static_pages#join'
+  get 'join' 		=> 'team_applications#new'
+  post 'join' 		=> 'team_applications#create'
+  get 'pitch' 		=> 'proposals#new'
+  post 'pitch' 		=> 'proposals#create'
+  get 'contact' 	=> 'messages#new'
+  post 'contact' 	=> 'messages#create'
 
   get 'users/new'
   get 'signup' => 'users#new'
@@ -18,6 +19,9 @@ Rails.application.routes.draw do
   delete 'logout' => 'sessions#destroy'
 
   resources :users
+  resources :proposals, only: [:index, :show]
+  resources :messages, only: [:index, :show]
+  resources :team_applications, only: [:index, :show]
 
   # Example of regular route:
   #   get 'products/:id' => 'catalog#view'

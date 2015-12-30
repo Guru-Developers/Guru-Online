@@ -8,9 +8,4 @@ class StaticPagesController < ApplicationController
   def portfolio
   end
 
-  def join
-  end 
-
-  def contact
-  end
 end

@@ -1,0 +1,14 @@
+<h1>Messages#index</h1>
+<p>Find me in app/views/messages/index.html.erb</p>
+
+<%= will_paginate %>
+
+<% @messages.each do |m| %>
+    <div class="well">
+      <%= render 'message', m: m%>
+      <%= link_to "Permalink", message_path(m), class: "btn btn-primary"  %>
+    </div>
+<% end %>
+
+<%= will_paginate %>
+

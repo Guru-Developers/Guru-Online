@@ -1,0 +1,17 @@
+
+    <p><%=a.first_name%> <%= a.last_name %> </p>
+    <p> <%= a.email %></p>
+    <p> DOB: <%= a.date_of_birth.to_formatted_s(:long_ordinal)%></p>
+
+    <p> Attends UNC: <%= a.attends_unc ? "Yes" : "No" %></p>
+
+    <p> Github: <%= link_to a.github_url unless a.github_url.nil?%></p>
+    <p> LinkedIn: <%= link_to a.linkedin_url unless a.linkedin_url.nil?%></p>
+    <p> Website: <%= link_to a.website_url unless a.website_url.nil?%></p>
+
+    <p> <%= link_to "View resume", a.resume_url %></p>
+
+    <p>Cover Letter: <br><%= a.cover_letter unless a.cover_letter.nil? %></p>
+
+    <p> Submitted on: <%= a.created_at.to_formatted_s(:long_ordinal) %> </p>
+
