@@ -1,25 +1,14 @@
 Rails.application.routes.draw do
 
- # these will be log-in only
-  get 'messages/index'
-  get 'messages/show'
-
-  get 'proposals/index'
-  get 'proposals/show'
-
-  get 'team_applications/index'
-  get 'team_applications/show'
-
   # The priority is based upon order of creation: first created -> highest priority.
-  # See how all your routes lay out with "rake routes".
 
   root 'static_pages#home'
   get 'team' 		=> 'static_pages#team'
   get 'portfolio' 	=> 'static_pages#portfolio'
   get 'join' 		=> 'team_applications#new'
   post 'join' 		=> 'team_applications#create'
-  get 'proposal' 	=> 'proposals#new'
-  post 'proposal' 	=> 'proposals#create'
+  get 'pitch' 		=> 'proposals#new'
+  post 'pitch' 		=> 'proposals#create'
   get 'contact' 	=> 'messages#new'
   post 'contact' 	=> 'messages#create'
 
@@ -30,6 +19,9 @@ Rails.application.routes.draw do
   delete 'logout' => 'sessions#destroy'
 
   resources :users
+  resources :proposals, only: [:index, :show]
+  resources :messages, only: [:index, :show]
+  resources :team_applications, only: [:index, :show]
 
   # Example of regular route:
   #   get 'products/:id' => 'catalog#view'

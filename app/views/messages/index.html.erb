@@ -4,12 +4,10 @@
 <%= will_paginate %>
 
 <% @messages.each do |m| %>
-  <div class="well">
-    <p>From: <%= m.email %></p>
-    <p>Message: </p>
-    <p><%= m.message%></p>
-    <p> Sent on: <%= m.created_at.to_formatted_s(:long_ordinal) %> </p>
-  </div>
+    <div class="well">
+      <%= render 'message', m: m%>
+      <%= link_to "Permalink", message_path(m), class: "btn btn-primary"  %>
+    </div>
 <% end %>
 
 <%= will_paginate %>

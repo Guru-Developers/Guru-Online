@@ -1,5 +1,7 @@
 class MessagesController < ApplicationController
 
+  before_action :restrict_to_logged_in, only: [:index, :show]
+
   def index
     @messages = Message.paginate(page: params[:page])
   end

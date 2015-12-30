@@ -1,5 +1,7 @@
 class ProposalsController < ApplicationController
 
+  before_action :restrict_to_logged_in, only: [:index, :show]
+
 
   def index
     @proposals = Proposal.paginate(page: params[:page])
@@ -21,6 +23,7 @@ class ProposalsController < ApplicationController
   def show
     @proposal = Proposal.find(params[:id])
   end
+
 
   private
     

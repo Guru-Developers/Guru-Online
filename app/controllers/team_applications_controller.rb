@@ -1,6 +1,9 @@
 class TeamApplicationsController < ApplicationController
+
+  before_action :restrict_to_logged_in, only: [:index, :show]
+
   def index
-    @applications = TeamApplication.paginate(page: params[:page])
+    @team_applications = TeamApplication.paginate(page: params[:page])
   end
 
   def new

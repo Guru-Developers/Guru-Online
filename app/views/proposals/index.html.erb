@@ -6,23 +6,8 @@
 <% @proposals.each do |p| %>
 
     <div class="well">
-
-   <p> <%= p.first_name %> <%= p.last_name %> </p>
-   <p> <%= p.email %> </p>
-    
-   <p>Company:
-     <%= p.company_name unless p.company_name.nil?%> 
-     <%= link_to p.company_url unless p.company_url.nil? %> 
-   </p>
-
-   <p><%=p.message%></p>
-
-    <% unless p.pitch_deck.nil? || p.pitch_deck.length==0 %>
-      <p> <%= link_to "View pitch deck", p.pitch_deck_url %></p>
-    <% end %>
-
-    <p> Submitted on: <%= p.created_at.to_formatted_s(:long_ordinal) %> </p>
-
+      <%= render 'proposal', p: p%>
+      <%= link_to "Permalink", proposal_path(p), class: "btn btn-primary"  %>
     </div>
 
 <% end %>
