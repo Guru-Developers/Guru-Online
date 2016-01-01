@@ -4,317 +4,120 @@
 body { 
     font-family: 'Open Sans', sans-serif;
     text-align: center; 
-    width: 100%;
+    background-image: url(../assets/concrete.png);
 }
 
-h1, h2, h3 {
+h1, h2, h3, .top-bar, .member-name, .contact-btn, .member-job {
     font-family: 'Montserrat', sans-serif;
 }
 
-.top-bar {
-    background: #FFF;
-    color: #008bd3;
-    font-family: 'Montserrat', sans-serif;
-    font-size: 2em;
-    padding-left: 10%;
-    padding-right: 10%;
-    padding-top: 2%;
-    padding-bottom: 2%;
-    z-index: 50;
-    position: fixed;
-    width: 100%;
-}
+p { text-align: left; }
+a:hover { text-decoration: none !important }
+section { margin-bottom: 20pt }
 
-#join-us {
-    background: #008bd3;
-    padding-left: 10%;
-    padding-right: 10%;
-    padding-top: 6%;
-    padding-bottom: 6%;
-    color: #FFF;
-    font-size: 2em;
-}
-
-#join-us a {
-    color: #FFF;
-}
-
-#opening {
-    font-weight: bold;
-    text-decoration: underline;
-}
 
 .cover {
     position: relative;
     background-image: url(Header.jpg);
     background-size: cover;
-    max-height: 600px;
     height: 600px;
 }
 
 #overlay {
-    /*background: #008bd3; */
-    background: rgba(0, 139, 211, 0.8);
+    background: rgba(80,80,80, 0.8);
     position: absolute;
     bottom: 0px;
-    left: 0px;
     width: 100%;
 }
-
 
 .overlay-text {
     color: #FFF;
     text-align: left;
-    padding-left: 10%;
-    padding-right: 10%;
-    padding-top: 3%;
-    padding-bottom: 3%;
+    font-size: 14pt;
+    font-weight: bold;
+    padding-bottom: 10pt;
 }
+
 
 .qualities {
-    background: #f0f0f0;
-    background-image: url(../assets/concrete.png);
-    padding-left: 10%;
-    padding-right: 10%;
-    padding-top: 5%;
-    padding-bottom: 3%;
-}
-
-.h3-green {
-    color:#7aa657;
-}
-
-p { text-align: left; }
-
-.p-white {
-    color: #FFF;
-    margin-bottom: 3%;
-}
-
-.gallery {
-    background-image: url(../assets/WorkB.png);
-    padding-left: 10%;
-    padding-right: 10%;
-    padding-top: 5%;
-    padding-bottom: 3%;
-}
-
-.work-img {
-    border: solid 8px #FFF;
-}
-
-.work-img:hover { 
-    border: solid 8px #008bd3;
-    box-shadow: 0px 0px 30px #FFF;
-    transition: 0.4s;
+    padding: 20pt;
+    h3 {
+       color:#7aa657;
+    }
+    h1 {
+       color:#008bd3;
+    }
 }
 
 
-.h3-work a { 
-    color: #FFF; 
-    text-decoration: none; 
-}
-.h3-work a:hover { 
-    text-shadow: 0px 0px 5px #FFF; 
-    transition: 0.4s;
+.works {
+   padding: 20pt;
+   color: white;
+   background-color: #008bd3;
+   img {
+     border: solid 8px #008bd3;
+     &:hover {
+       border: solid 8px white;
+       box-shadow: 0px 0px 30px #FFF;
+       transition: 0.4s;
+     }
+   }
+   h3 {
+    color: white;
+    &:hover { 
+        text-shadow: 0px 0px 5px #FFF; 
+        transition: 0.4s;
+      }
+   }
 }
 
 
-.h1-blue { 
-    color: #008bd3; 
-    margin-bottom: 5%;
-}
-
-.h1-white {
-    color: #FFF; 
-    margin-bottom: 5%;
-}
-
-.h1-white-lg {
-    color: #FFF; 
-    margin-bottom: 2%;
-    font-size: 3em;
-}
 
 .team {
-    background: #f0f0f0;
-    background-image: url(../assets/concrete.png);
-    padding-left: 10%;
-    padding-right: 10%;
-    padding-top: 5%;
-    padding-bottom: 3%;
+   color: #008bd3;
 }
 
-#opening:hover {
-    text-shadow: 0px 0px 4px #FFF;
-    transition: 0.2s;
-}
-
-.testimonial {
-    background: #f0f0f0;
-    background-image: url(../assets/concrete.png);
-    padding-left: 10%;
-    padding-right: 10%;
-    padding-top: 5%;
-    padding-bottom: 3%;
-}
-
-.contact {
-    background: #f0f0f0;
-    background-image: url(../assets/Contact.png);
-    padding-left: 10%;
-    padding-right: 10%;
-    padding-top: 5%;
-    padding-bottom: 3%;
-}
-
-.company {
-    text-align: right;
-    font-weight: bold;
-    font-style: italic;
-    margin-right: 10%;
-    margin-bottom: 10%;
-}
-
-.member-img img {
+.team img {
     max-width: 240px;
     max-height: 240px;
     border: solid 10px #008bd3;
     border-radius: 100%;
-}
-
-.member-img img:hover {
-    border: solid 10px #FFF;
-    box-shadow: 0px 0px 13px #008bd3;
-    transition: 0.4s;
+    &:hover {
+      border: solid 10px #FFF;
+      box-shadow: 0px 0px 13px #008bd3;
+      transition: 0.4s;
+  }
 }
 
 .member-name {
-    color: #008bd3;
-    font-family: 'Montserrat', sans-serif;
     font-size: 1.5em;
     margin-top: 3%;
 }
 
 .member-job {
     color: #83858a;
-    font-family: 'Montserrat', sans-serif;
     font-size: 0.8em;
     word-spacing: 5px;
     text-transform: uppercase;
-    margin-top: -1%;
     margin-bottom: 5%;
 }
 
-.row {
-    margin-bottom: 5%;
+.contact {
+    color: white;
+    background-color: #008bd3;
+    padding-bottom: 20pt;
 }
 
 .contact-btn {
     background: transparent;
-    border-radius: 0;
     border: solid 5px #FFF;
-    color: #FFF;
-    font-family: 'Montserrat', sans-serif;
     font-size: 2em;
-    padding-left: 3%;
-    padding-right: 3%;
-    padding-top: 1%;
-    padding-bottom: 1%;
-    margin-bottom: 4%;
+    padding: 0pt 20pt;
 }
 
 .contact-btn:hover {
     background: #FFF;
-    border-radius: 0;
-    border: solid 5px #FFF;
     color: #008bd3;
     transition: 0.2s;
 }
 
-footer {
-    padding-left: 10%;
-    padding-right: 10%;
-    padding-top: 5%;
-}
-
-.footer {
-    color: #008bd3;
-}
-
-.footer a {
-    color: #008bd3;
-}
-
-.contact-link {
-    margin-top: 8px;
-}
-
-.copyright {
-    color: #008bd3;
-    font-weight: bold;
-    padding-bottom: 5%;
-}
-
-.sitemap {
-    list-style-type: none;
-    text-align: left;
-    font-weight: bold;
-    line-height: 1.5;
-}
-
-@media (max-width: 600px) {
-    .sitemap li {
-        display: inline-block;
-        margin-left: 12%;
-        margin-right: 12%;
-    }
-    
-    .sitemap {
-        margin-top: 7%;
-        margin-bottom: 7%;
-        text-align: left;
-    }
-}
-
-.address {
-    text-align: left;
-}
-
-@media (max-width: 600px) {
-    .address, .p-address {
-        text-align: center;
-    }
-    
-    .address { 
-        margin-top: 15%;
-        margin-bottom: 15%;
-    }
-}
-
-.city {
-    font-size: 1.4em;
-    font-weight: bold;
-}
-
-.social a {
-    text-decoration: none;
-    margin: 2%;
-    padding-left: 2%;
-    padding-right: 2%;
-    padding-top: 3%;
-    padding-bottom: 3%;
-    border-radius: 10px;
-}
-
-.social a:hover {
-    box-shadow: 0px 0px 4px #008bd3;
-    transition: 0.4s;
-}
-
-@media (max-width: 600px) {
-    .social {
-        margin-top: 15%;
-        margin-bottom: 15%;
-    }
-}

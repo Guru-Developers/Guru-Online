@@ -3,8 +3,7 @@
 <html>
   <head>
     <title> <%= full_title(yield(:title)) %> </title>
-    <%= stylesheet_link_tag 'homepage', media: 'all',
-                                           'data-turbolinks-track' => true %> 
+    <%= stylesheet_link_tag 'homepage', media: 'all', 'data-turbolinks-track' => true %> 
     <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
     <%= csrf_meta_tags %>
     <%= render 'layouts/shim'%>
@@ -17,395 +16,128 @@
       <% end %>
 
     <section class="cover">
-
         <div class="container-fullwidth" id="overlay">
-
-            <div class="overlay-text">
-
+            <div class="overlay-text container">
                 <h1>About Us</h1>
-
                 <p>
-
                 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin elementum lobortis nisl, at accumsan nunc scelerisque at. Integer imperdiet, turpis quis vulputate laoreet, erat ante accumsan ligula, et tincidunt tellus sem eu ex. Aenean viverra libero tortor. Quisque venenatis hendrerit viverra. Nunc nisl mi, accumsan et orci nec, convallis vehicula magna. Integer pellentesque nunc nisl, sed dapibus libero laoreet nec. Donec ac iaculis lectus. Nulla vitae congue lacus.
-
                 </p>
-
             </div>
-
         </div>
-
     </section>
-
     
-
-    <section class="qualities">
-
-        <div class="container-fullwidth">
-
+    <section class="qualities container-fullwidth">
             <div class="row">
-
-                <h1 class="h1-blue">Why We're Cool</h1>
-
+                <h1>Why We're Cool</h1>
                 <div class="col-md-4" id="better">
-
                     <img src="assets/icons/bars.png" />
-
-                    <h3 class="h3-green">Better</h1>
-
+                    <h3>Better</h3>
                     <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec in ullamcorper lorem. Quisque quis sapien non orci aliquam eleifend quis vitae metus. Curabitur lacus magna, finibus at consectetur vitae, scelerisque vitae dui. Maecenas non tortor eleifend, bibendum enim vitae, aliquam massa.</p>
-
                 </div>
-
                 <div class="col-md-4"  id="different">
-
                     <img src="assets/icons/beaker.png" />
-
-                    <h3 class="h3-green">Different</h1>
-
+                    <h3>Different</h3>
                     <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec in ullamcorper lorem. Quisque quis sapien non orci aliquam eleifend quis vitae metus. Curabitur lacus magna, finibus at consectetur vitae, scelerisque vitae dui. Maecenas non tortor eleifend, bibendum enim vitae, aliquam massa.</p>
-
                 </div>
-
                 <div class="col-md-4" id="creative">
-
                     <img src="assets/icons/globe.png" />
-
-                    <h3 class="h3-green">Creative</h1>
-
+                    <h3>Creative</h3>
                     <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec in ullamcorper lorem. Quisque quis sapien non orci aliquam eleifend quis vitae metus. Curabitur lacus magna, finibus at consectetur vitae, scelerisque vitae dui. Maecenas non tortor eleifend, bibendum enim vitae, aliquam massa.</p>
-
                 </div>
-
             </div>
-
-        </div>
-
     </section>
-
     
+    <section class="works container-fullwidth">
+    	<h1>Our Works</h1>
+    	<div class="container">
+        	<a href="#"><div class="col-md-4"> 
+                	<img src="assets/works/crave.png"/>
+                	<h3> Crave App </h3>
+                </div></a>
 
-    <section class="works">
+                <a href="#"><div class="col-md-4">
+                         <img src="assets/works/pay.png"/>
+                        <h3> Payment Web App</h3>                    
+		</div></a>
 
-        <div class="container-fullwidth gallery">
-
-                <h1 class="h1-white">Our Works</h1>
-
-                <div class="row">
-
-                    <div class="col-md-4">
-
-                        <a href="#">
-
-                            <img class="work-img" src="assets/works/crave.png"/>
-
-                        </a>
-
-                        <h3 class="h3-work">
-
-                            <a href="#">Crave App</a>
-
-                        </h3>
-
-                    </div>
-
-                    <div class="col-md-4">
-
-                        <a href="#">
-
-                            <img class="work-img" src="assets/works/pay.png"/>
-
-                        </a>
-
-                        <h3 class="h3-work">
-
-                            <a href="#">Payment Web App</a>
-
-                        </h3>                    </div>
-
-                    <div class="col-md-4">
-
-                        <a href="#">
-
-                            <img class="work-img" src="assets/works/cyanoid.png"/>
-
-                        </a>
-
-                        <h3 class="h3-work">
-
-                            <a href="#">Cyanoid UI</a>
-
-                        </h3>                    </div>
-
-                </div>
-
-                <div class="row">
-
-                    <div class="col-md-4">
-
-                        <a href="#">
-
-                            <img class="work-img" src="assets/works/peti.png"/>
-
-                        </a>
-
-                        <h3 class="h3-work">
-
-                            <a href="#">Peti Network</a>
-
-                        </h3>
-
-                    </div>
-
-                    <div class="col-md-4">
-
-                        <a href="#">
-
-                            <img class="work-img" src="assets/works/provon.png"/>
-
-                        </a>
-
-                        <h3 class="h3-work">
-
-                            <a href="#">Provon Interface</a>
-
-                        </h3>                    
-
-                    </div>
-
-                    <div class="col-md-4">
-
-                        <a href="#">
-
-                            <img class="work-img" src="assets/works/AOW.png"/>
-
-                        </a>
-
-                        <h3 class="h3-work">
-
-                            <a href="#">AOW UI Kit</a>
-
-                        </h3>                    
-
-                    </div>
-
-                </div>
-
-        </div>
-
+                <a href="#"><div class="col-md-4">
+                         <img src="assets/works/cyanoid.png"/>
+                         <h3>Cyanoid UI</h3>
+                </div></a>
+	</div>
     </section>
-
     
-
-    <section class="team">
-
-        <div class="container-fullwidth">
-
-            <h1 class="h1-blue">Our Team</h1>
-
+    <section class="team container-fullwidth">
+	<div class="container">
+            <h1>Our Team</h1>
             <div class="row">
-
                 <div class="col-md-3 col-sm-6 col-xs-12">
-
                     <div class="member-img">
-
                         <a href="#">
-
                             <img src="assets/members/alba.jpg"/>
-
                         </a>
-
                     </div>
-
                     <div class="member-name">Sophia Ang</div>
-
                     <div class="member-job">Software Development</div>
-
                 </div>
-
                 <div class="col-md-3 col-sm-6 col-xs-12">
-
                     <div class="member-img">
-
                         <a href="#">
-
                             <img src="assets/members/capps.jpg"/>
-
                         </a>
-
                     </div>
-
                     <div class="member-name">Shawn Harding</div>
-
                     <div class="member-job">UI / UX Design</div>
-
                 </div>          
-
                 <div class="col-md-3 col-sm-6 col-xs-12">
-
                     <div class="member-img">
-
                         <a href="#">
-
                             <img src="assets/members/chew.jpg"/>
-
                         </a>
-
                     </div>
-
                     <div class="member-name">Mariah Choi</div>
-
                     <div class="member-job">Public Relations</div>
-
                 </div>
-
                 <div class="col-md-3 col-sm-6 col-xs-12">
-
                     <div class="member-img">
-
                         <a href="#">
-
                             <img src="assets/members/dadich.jpg"/>
-
                         </a>
-
                     </div>
-
                     <div class="member-name">Henry Kelsh</div>
-
                     <div class="member-job">Data Analyst</div>
-
-                </div>                     </div>
-
-            <div class="row">
-
+                </div>                    
                 <div class="col-md-3 col-sm-6 col-xs-12">
-
                     <div class="member-img">
-
                         <a href="#">
-
                             <img src="assets/members/draisin.jpg"/>
-
                         </a>
-
                     </div>
-
                     <div class="member-name">Alice Milano</div>
-
                     <div class="member-job">Database Development</div>
-
                 </div>
-
                 <div class="col-md-3 col-sm-6 col-xs-12">
-
                     <div class="member-img">
-
                         <a href="#">
-
                             <img src="assets/members/kelleher.jpg"/>
-
                         </a>
-
                     </div>
-
                     <div class="member-name">Hellen Schneider</div>
-
                     <div class="member-job">Graphic Design</div>
-
                 </div>          
-
              </div>
-
-        </div>
-
+	</div>
     </section>
 
     
-
-    <section class="join">
-
-        <div class="container-fullwidth" id="join-us">
-
-            Are you interested in joining our team?  Check out our <span id="opening"><a href="#">current openings</a></span>!
-
-        </div>
-
-    </section>
-
-    
-
-    <section class="testimonial">
-
-        <div class="container-fullwidth">
-
-            <h1 class="h1-blue">Testimonials</h1>
-
-            <div class="row">
-
-                <div class="col-md-6">
-
-                    <p>Proin tincidunt felis sed ipsum ullamcorper interdum. Sed semper pharetra nunc, nec faucibus dolor laoreet ac. Quisque eu dolor facilisis, laoreet odio nec, hendrerit diam. Sed rutrum congue eros ac ornare. Duis eleifend elit ac venenatis rutrum. Fusce ac ante ante. In porta ut quam a auctor. Sed maximus placerat feugiat.</p>
-
-                    <p class="company">- Company A</p>
-
-                </div>
-
-                <div class="col-md-6">
-
-                    <p>Sed sed mi metus. Quisque purus diam, molestie eget sapien id, placerat posuere est. Pellentesque metus magna, bibendum a tellus eu, tincidunt dapibus neque. Phasellus fringilla est sit amet orci blandit, eu dapibus turpis euismod. Nullam ac quam ut mauris euismod tincidunt. Nunc et interdum erat. Maecenas luctus lorem vitae mi rutrum, et pellentesque leo semper. Morbi gravida mi vel arcu tristique blandit. Phasellus tempus placerat lorem, eu tempus justo. Vivamus aliquam pharetra nisi vel accumsan. Praesent tempus sollicitudin magna, iaculis vulputate sapien placerat nec.
-
-                    </p>
-
-                    <p class="company">- Company B</p>
-
-                </div>
-
+    <section class="contact container-fullwidth">
+            <div class="contact-us container">
+                <h1>Let's Get in Touch!</h1>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam nec suscipit sapien, eu feugiat lacus. Nam sodales, tortor ut pulvinar sollicitudin, neque lorem tincidunt nunc, nec varius metus felis a urna. Maecenas quis sagittis lorem. Nam laoreet, justo nec congue malesuada, est leo ultrices orci, ac semper purus odio nec lectus. Pellentesque id ipsum nec lectus malesuada imperdiet in ac dui. Curabitur aliquam magna nulla, at dignissim diam imperdiet sed.</p>
+                <button class="contact-btn">Join Us</button>
+                <button class="contact-btn">Work With Us</button>
+                <button class="contact-btn" >Contact Us</button>
             </div>
-
-            <div class="row">
-
-                <div class="col-md-6">
-
-                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec in ullamcorper lorem. Quisque quis sapien non orci aliquam eleifend quis vitae metus. Curabitur lacus magna, finibus at consectetur vitae, scelerisque vitae dui. Maecenas non tortor eleifend, bibendum enim vitae, aliquam massa. Phasellus id purus vel nisi ultrices bibendum. Aliquam commodo elit sem, nec aliquet sem tempus id. Aliquam consectetur sed tellus at convallis. Curabitur eget est porttitor, lobortis tortor eu, tristique nisi. Morbi non pretium dui. Curabitur ornare tortor eget est ultrices ultricies.</p>
-
-                    <p class="company">- Company C</p>
-
-                </div>
-
-                <div class="col-md-6">
-
-                    <p>Maecenas luctus lorem vitae mi rutrum, et pellentesque leo semper. Morbi gravida mi vel arcu tristique blandit. Phasellus tempus placerat lorem, eu tempus justo. Vivamus aliquam pharetra nisi vel accumsan. Praesent tempus sollicitudin magna, iaculis vulputate sapien placerat nec.
-
-                    </p>
-
-                    <p class="company">- Company D</p>
-
-                </div>
-
-            </div>
-
-        </div>    
-
-    </section><!--testimonials-->
-
-    
-
-    <section class="contact">
-
-        <div class="container-fullwidth">
-
-            <div class="contact-us">
-
-                <h1 class="h1-white-lg">Let's Get in Touch!</h1>
-
-                <p class="p-white">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam nec suscipit sapien, eu feugiat lacus. Nam sodales, tortor ut pulvinar sollicitudin, neque lorem tincidunt nunc, nec varius metus felis a urna. Maecenas quis sagittis lorem. Nam laoreet, justo nec congue malesuada, est leo ultrices orci, ac semper purus odio nec lectus. Pellentesque id ipsum nec lectus malesuada imperdiet in ac dui. Curabitur aliquam magna nulla, at dignissim diam imperdiet sed.</p>
-
-                <button class="contact-btn" type="button">Contact Us</button>
-
-            </div>
-
-        </div>    
-
     </section>
      
       <%= render 'layouts/footer'%>

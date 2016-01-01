@@ -1,63 +1,70 @@
 @import "bootstrap-sprockets";
 @import "bootstrap";
 
-@mixin box_sizing {
-  -moz-box-sizing:    border-box;
-  -webkit-box-sizing: border-box;
-  box-sizing:         border-box;
+$blue: #008bd3;
+
+/* header */
+.nav a {
+	color: white;
+        font-size: 14pt;
+} 
+
+header {
+    background: $blue;
+    border-bottom: solid 1px grey !important;
+    a:hover {
+	color: $blue;
+    }
 }
 
-$light-gray: #777;
-
-
+.icon-bar{
+    background: white;
+}
 
 #logo {
   float: left;
-  margin-right: 10px;
-  font-size: 1.7em;
+  font-size: 22pt;
   color: white;
-  text-transform: uppercase;
   letter-spacing: -1px;
   padding-top: 9px;
   font-weight: bold;
   &:hover {
-  	color: #fff;
-  	text-decoration: none;
-	}
+  	color: lightgrey;
+  }
 }
-
 
 
 /* footer */
 
 footer {
-margin-top: 45px;
-padding-top: 5px;
-border-top: 1px solid #eaeaea;
-color: $light-gray;
-
-	a {
-		color: #555;
-
-		&:hover {
-			color: #222;
-			}
-		}
-
-	small {
-		float: left;
-		}
-
-	ul {
-  	float: right;
+    background: black;
+    color: white;
+    border-top: 1px solid #eaeaea;
+    min-height: 100pt;
+    font-size: 14pt;
+    a {
+   	color: white;
+	&:hover {
+	    color: #008bd3;
+	    text-decoration: none;
+        }
+    }
+    ul {
+	text-align: right;
   	list-style: none;
-
-  	li {
-  		float: left;
-  		margin-left: 15px;
-		}
-	}
+	margin-top: 10pt;
+	margin-bottom: 20pt;
+  	    li {
+		display: inline-block;
+     		margin-right: 15pt;
+	    }
+    }
 }
+
+.copyright {
+    font-weight: bold;
+}
+
 
 
 
@@ -66,6 +73,5 @@ color: $light-gray;
   float: left;
   width: 100%;
   margin-top: 45px;
-  @include box_sizing;
 }
 
