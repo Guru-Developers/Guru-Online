@@ -7,7 +7,8 @@
 
     <div class="well">
       <%= render 'proposal', p: p%>
-      <%= link_to "Permalink", proposal_path(p), class: "btn btn-primary"  %>
+      <%= link_to "Permalink", p, class: "btn btn-primary"  %>
+      <%= link_to 'Delete', p, method: :delete, class: "btn btn-danger",  data: { confirm: 'Are you sure?' } %>
     </div>
 
 <% end %>

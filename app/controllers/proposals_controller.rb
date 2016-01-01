@@ -1,6 +1,6 @@
 class ProposalsController < ApplicationController
 
-  before_action :restrict_to_logged_in, only: [:index, :show]
+  before_action :restrict_to_logged_in, only: [:index, :show, :destroy]
 
 
   def index
@@ -24,6 +24,11 @@ class ProposalsController < ApplicationController
     @proposal = Proposal.find(params[:id])
   end
 
+  def destroy
+    Proposal.find(params[:id]).destroy
+    flash[:success] = "Proposal deleted"
+    redirect_to proposals_path
+  end
 
   private
     

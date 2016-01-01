@@ -1,0 +1,7 @@
+/*
+ *= require general.css
+ *= require header.css
+ *= require footer.css
+ *= require home.css
+ *= require_self
+*/

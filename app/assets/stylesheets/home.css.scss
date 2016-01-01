@@ -1,0 +1,125 @@
+@import url(https://fonts.googleapis.com/css?family=Open+Sans);
+@import url(https://fonts.googleapis.com/css?family=Montserrat);
+
+body { 
+    font-family: 'Open Sans', sans-serif;
+    text-align: center; 
+    background-image: url(../assets/concrete.png);
+}
+
+h1, h2, h3, .top-bar, .member-name, .contact-btn, .member-job {
+    font-family: 'Montserrat', sans-serif;
+}
+
+p { text-align: left; }
+a:hover { text-decoration: none !important }
+section { margin-bottom: 20pt }
+
+
+.cover {
+    position: relative;
+    background-image: url(Header.jpg);
+    background-size: cover;
+    height: 600px;
+}
+
+#overlay {
+    background: rgba(80,80,80, 0.8);
+    position: absolute;
+    bottom: 0px;
+    width: 100%;
+}
+
+.overlay-text {
+    color: #FFF;
+    text-align: left;
+    font-size: 14pt;
+    font-weight: bold;
+    padding-bottom: 10pt;
+}
+
+
+.qualities {
+    padding: 20pt;
+    h3 {
+       color:#7aa657;
+    }
+    h1 {
+       color:#008bd3;
+    }
+}
+
+
+.works {
+   padding: 20pt;
+   color: white;
+   background-color: #008bd3;
+   img {
+     border: solid 8px #008bd3;
+     &:hover {
+       border: solid 8px white;
+       box-shadow: 0px 0px 30px #FFF;
+       transition: 0.4s;
+     }
+   }
+   h3 {
+    color: white;
+    &:hover { 
+        text-shadow: 0px 0px 5px #FFF; 
+        transition: 0.4s;
+      }
+   }
+}
+
+
+
+.team {
+   color: #008bd3;
+}
+
+.team img {
+    max-width: 240px;
+    max-height: 240px;
+    border: solid 10px #008bd3;
+    border-radius: 100%;
+    &:hover {
+      border: solid 10px #FFF;
+      box-shadow: 0px 0px 13px #008bd3;
+      transition: 0.4s;
+  }
+}
+
+.member-name {
+    font-size: 1.5em;
+    margin-top: 3%;
+}
+
+.member-job {
+    color: #83858a;
+    font-size: 0.8em;
+    word-spacing: 5px;
+    text-transform: uppercase;
+    margin-bottom: 5%;
+}
+
+
+
+.contact {
+    color: white;
+    background-color: #008bd3;
+    padding-bottom: 20pt;
+}
+
+.contact-btn {
+    background: transparent;
+    border: solid 5px #FFF;
+    font-size: 2em;
+    padding: 0pt 20pt;
+}
+
+.contact-btn:hover {
+    background: #FFF;
+    color: #008bd3;
+    transition: 0.2s;
+}
+

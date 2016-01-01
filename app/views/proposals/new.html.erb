@@ -1,9 +1,14 @@
-<%= provide(:title, "Proposal")%>
-<p>Find me in app/views/proposals/new.html.erb</p>
+<%= provide(:title, "Work With Us")%>
+<h1><%= yield(:title)%></h1>
+<p>Find me in app/views/messages/new.html.erb</p>
+
+<div class="row">
+  <p>Explanatory text along the lines of: submit this form, tell us about your project, we'll get back to you, etc.</p>
+</div>
 
 <div class="row">
 
-    <%= form_for(@proposal, url: pitch_path) do |f| %>
+    <%= form_for(@proposal, url: request_path) do |f| %>
 
       <%= render 'shared/error_messages', object: f.object %>
 
@@ -17,16 +22,17 @@
       <%= f.email_field :email, class: 'form-control' %>
 
       <%= f.label :company_name %>
-      <%= f.text_field :company_name, class: 'form-control' %>
+      <%= f.text_field :company_name, class: 'form-control', placeholder: 'Optional' %>
 
-      <%= f.label :company_url %>
-      <%= f.url_field :company_url, class: 'form-control' %>
+      <%= f.label "Company website" %>
+      <%= f.url_field :company_url, class: 'form-control', placeholder: 'Optional' %>
 
-      <%= f.label :message %>
-      <%= f.text_area :message, class: 'form-control' %>
+      <%= f.label "Description" %>
+      <p> Please provide as much information as possible. Include things like: what steps you've taken so far, your position in the company you're representing, the current status of the project, its expected timeline, why you're looking to work with us in particular, etc.</p>
+      <%= f.text_area :message, class: 'form-control', rows: '15' %>
 
-      <%= f.label :pitch_deck %>
-      <%= f.file_field :pitch_deck, class: 'form-control' %>
+      <%= f.label "Pitch deck (ppt, pdf, doc, docx)" %>
+      <%= f.file_field :pitch_deck, class: 'form-control', accept: '.doc, .docx, .pdf, .ppt, .pptx'  %>
 
       <%= f.submit "Submit", class: "btn btn-primary" %>
     <% end %> 
