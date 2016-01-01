@@ -7,8 +7,8 @@ Rails.application.routes.draw do
   get 'portfolio' 	=> 'static_pages#portfolio'
   get 'join' 		=> 'team_applications#new'
   post 'join' 		=> 'team_applications#create'
-  get 'pitch' 		=> 'proposals#new'
-  post 'pitch' 		=> 'proposals#create'
+  get 'request'		=> 'proposals#new'
+  post 'request' 	=> 'proposals#create'
   get 'contact' 	=> 'messages#new'
   post 'contact' 	=> 'messages#create'
 
@@ -19,9 +19,9 @@ Rails.application.routes.draw do
   delete 'logout' => 'sessions#destroy'
 
   resources :users
-  resources :proposals, only: [:index, :show]
-  resources :messages, only: [:index, :show]
-  resources :team_applications, only: [:index, :show]
+  resources :proposals, only: [:index, :show, :destroy]
+  resources :messages, only: [:index, :show, :destroy]
+  resources :team_applications, only: [:index, :show, :destroy]
 
   # Example of regular route:
   #   get 'products/:id' => 'catalog#view'

@@ -1,4 +1,6 @@
 <%= provide(:title, "Contact")%>
+<h1> Contact Us </h1>
+
 <p>Find me in app/views/messages/new.html.erb</p>
 
 <div class="row">
@@ -11,7 +13,7 @@
       <%= f.email_field :email, class: 'form-control' %>
 
       <%= f.label :message %>
-      <%= f.text_area :message, class: 'form-control' %>
+      <%= f.text_area :message, class: 'form-control', rows: '10' %>
 
       <%= f.submit "Submit", class: "btn btn-primary" %>
     <% end %> 

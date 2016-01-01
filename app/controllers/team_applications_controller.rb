@@ -1,6 +1,6 @@
 class TeamApplicationsController < ApplicationController
 
-  before_action :restrict_to_logged_in, only: [:index, :show]
+  before_action :restrict_to_logged_in, only: [:index, :show, :destroy]
 
   def index
     @team_applications = TeamApplication.paginate(page: params[:page])
@@ -22,6 +22,13 @@ class TeamApplicationsController < ApplicationController
   def show
     @application = TeamApplication.find(params[:id])
   end
+
+  def destroy
+    TeamApplication.find(params[:id]).destroy
+    flash[:success] = "Application deleted"
+    redirect_to team_applications_path
+  end
+
 
   private
     

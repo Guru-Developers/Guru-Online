@@ -6,7 +6,8 @@
 <% @messages.each do |m| %>
     <div class="well">
       <%= render 'message', m: m%>
-      <%= link_to "Permalink", message_path(m), class: "btn btn-primary"  %>
+      <%= link_to "Permalink", m, class: "btn btn-primary"  %>
+      <%= link_to 'Delete', m, method: :delete, class: "btn btn-danger",  data: { confirm: 'Are you sure?' } %>
     </div>
 <% end %>
 

@@ -1,6 +1,6 @@
 class MessagesController < ApplicationController
 
-  before_action :restrict_to_logged_in, only: [:index, :show]
+  before_action :restrict_to_logged_in, only: [:index, :show, :destroy]
 
   def index
     @messages = Message.paginate(page: params[:page])
@@ -22,6 +22,13 @@ class MessagesController < ApplicationController
   def show
     @message = Message.find(params[:id])
   end
+
+  def destroy
+    Message.find(params[:id]).destroy
+    flash[:success] = "Message deleted"
+    redirect_to messages_path
+  end
+
 
   private
     

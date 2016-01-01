@@ -8,6 +8,7 @@
   <div class="well">
     <%= render 'team_application', a: a%>
     <%= link_to "Permalink", team_application_path(a), class: "btn btn-primary"    %>
+    <%= link_to 'Delete', a, method: :delete, class: "btn btn-danger",  data: { confirm: 'Are you sure?' } %>
   </div>
 <% end %>
 
