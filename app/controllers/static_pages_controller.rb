@@ -1,4 +1,7 @@
 class StaticPagesController < ApplicationController
+
+  before_action :restrict_to_logged_in, only: [:admin]
+
   def home
     render layout: 'home'
   end
@@ -7,6 +10,9 @@ class StaticPagesController < ApplicationController
   end
 
   def portfolio
+  end
+
+  def admin
   end
 
 end

@@ -1,5 +1,7 @@
 class UsersController < ApplicationController
 
+  before_action :restrict_to_logged_in, only: [:index, :show, :destroy]
+
   def show
     if "#{params[:id]}" == "#{session[:user_id]}"
       @user = User.find(params[:id])
@@ -21,6 +23,16 @@ class UsersController < ApplicationController
       render 'new'
     end
   end
+
+  def index
+    @users = User.all
+  end
+
+  def destroy
+    User.find(params[:id]).destroy
+    flash[:success] = "User deleted"
+    redirect_to users_path
+  end  
 
   private
 

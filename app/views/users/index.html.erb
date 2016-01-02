@@ -1,0 +1,10 @@
+<% provide(:title, "Users") %>
+
+
+<% @users.each do |u| %>
+  <div class="well">
+    <p><%= u.name %></p>
+    <p><%= u.email %></p>
+    <%= link_to 'Remove User', u, method: :delete, class: "btn btn-danger",  data: { confirm: 'Are you sure?' } %>
+  </div>
+<% end %>

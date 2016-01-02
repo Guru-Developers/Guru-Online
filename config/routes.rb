@@ -5,6 +5,7 @@ Rails.application.routes.draw do
   root 'static_pages#home'
   get 'team' 		=> 'static_pages#team'
   get 'portfolio' 	=> 'static_pages#portfolio'
+  get 'admin' 		=> 'static_pages#admin'
   get 'join' 		=> 'team_applications#new'
   post 'join' 		=> 'team_applications#create'
   get 'request'		=> 'proposals#new'
@@ -12,7 +13,6 @@ Rails.application.routes.draw do
   get 'contact' 	=> 'messages#new'
   post 'contact' 	=> 'messages#create'
 
-  get 'users/new'
   get 'signup' => 'users#new'
   get 'login'  => 'sessions#new'
   post 'login' => 'sessions#create'

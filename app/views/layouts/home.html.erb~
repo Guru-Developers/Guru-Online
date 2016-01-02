@@ -133,7 +133,7 @@
     <section class="contact container-fullwidth">
             <div class="contact-us container">
                 <h1>Let's Get in Touch!</h1>
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam nec suscipit sapien, eu feugiat lacus. Nam sodales, tortor ut pulvinar sollicitudin, neque lorem tincidunt nunc, nec varius metus felis a urna. Maecenas quis sagittis lorem. Nam laoreet, justo nec congue malesuada, est leo ultrices orci, ac semper purus odio nec lectus. Pellentesque id ipsum nec lectus malesuada imperdiet in ac dui. Curabitur aliquam magna nulla, at dignissim diam imperdiet sed.</p>
+                <p> Are you an awesome developer looking to take on some new exciting projects with a team of super cool people? Do you have a startup you need awesome developers to help make a success? Do you have any other questions for us, or maybe just want to say "Hi"? Let us know! </p>
                 <button class="contact-btn">Join Us</button>
                 <button class="contact-btn">Work With Us</button>
                 <button class="contact-btn" >Contact Us</button>

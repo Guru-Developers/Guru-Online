@@ -34,7 +34,6 @@ section { margin-bottom: 20pt }
     color: #FFF;
     text-align: left;
     font-size: 14pt;
-    font-weight: bold;
     padding-bottom: 10pt;
 }
 
@@ -53,7 +52,7 @@ section { margin-bottom: 20pt }
 .works {
    padding: 20pt;
    color: white;
-   background-color: #008bd3;
+   background-color: grey;
    img {
      border: solid 8px #008bd3;
      &:hover {
@@ -101,6 +100,8 @@ section { margin-bottom: 20pt }
     text-transform: uppercase;
     margin-bottom: 5%;
 }
+
+
 
 .contact {
     color: white;
