@@ -1,7 +1,21 @@
-<h1>NotificationMailer#proposal</h1>
+<pre style="font-family: sans-serif">
+A new project proposal has been submitted.
 
-New proposal from <%= @proposal.email %>. 
+Name: <%= @proposal.first_name %> <%= @proposal.last_name %> 
+Email: <%= @proposal.email %>
+Company: <%= @proposal.company_name%> 
+Company website: <a href="<%= @proposal.company_url%>"><%= @proposal.company_url%></a>
 
-<p>
-  Find me in app/views/notification_mailer/proposal.html.erb
-</p>
+Message: </pre>
+"<%=@proposal.message%>" 
+
+<br><br>
+
+<% unless @proposal.pitch_deck.nil? || @proposal.pitch_deck.length==0 %>
+  <a href="<%= root_url + @proposal.pitch_deck_url %>">Download pitch deck</a>
+<% end %>
+
+<br><br>
+<a href="<%= proposal_url(@proposal) %>">View this submission</a>
+
+

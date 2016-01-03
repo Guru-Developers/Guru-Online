@@ -1,3 +1,18 @@
-NotificationMailer#application
+A new team member application has been submitted.
 
-<%= @greeting %>, find me in app/views/notification_mailer/application.text.erb
+Name: <%=@application.first_name%> <%= @application.last_name %> 
+Email: <%= @application.email %>
+Date of birth: <%= @application.date_of_birth.to_formatted_s(:long_ordinal)%> 
+Attends UNC: <%= @application.attends_unc ? "Yes" : "No" %>
+
+Github: <%= @application.github_url%>
+LinkedIn: <%= @application.linkedin_url%>
+Personal Website: <%= @application.website_url%>
+
+Cover Letter:
+<%= @application.cover_letter unless @application.cover_letter.nil? %> 
+
+Download Resume at <%= root_url + @application.resume_url %>
+
+
+View this submission at <%= team_application_url(@application) %>

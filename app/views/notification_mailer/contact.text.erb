@@ -1,3 +1,5 @@
-NotificationMailer#contact
+A new message has been sent from <%= @message.email %>.
 
-<%= @greeting %>, find me in app/views/notification_mailer/contact.text.erb
+"<%= @message.message %>"
+
+View this message at <%= message_url(@message) %>
