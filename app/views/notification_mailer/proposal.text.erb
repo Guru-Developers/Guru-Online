@@ -1,3 +1,16 @@
-NotificationMailer#proposal
+A new project proposal has been submitted.
 
-<%= @greeting %>, find me in app/views/notification_mailer/proposal.text.erb
+Name: <%= @proposal.first_name %> <%= @proposal.last_name %> 
+Email: <%= @proposal.email %>
+Company: <%= @proposal.company_name%> 
+Company website: <%= @proposal.company_url %>
+
+Message:
+"<%= @proposal.message %>" 
+
+<% unless @proposal.pitch_deck.nil? || @proposal.pitch_deck.length==0 %>
+  Download pitch deck at <%= root_url + @proposal.pitch_deck_url %>
+<% end %>
+
+
+View this submission at <%= proposal_url(@proposal) %>
