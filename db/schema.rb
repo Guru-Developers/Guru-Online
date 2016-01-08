@@ -20,17 +20,6 @@ ActiveRecord::Schema.define(version: 20151228215457) do
     t.datetime "updated_at", null: false
   end
 
-  create_table "patients", force: :cascade do |t|
-    t.string   "name"
-    t.string   "surgeon"
-    t.string   "email"
-    t.string   "device"
-    t.string   "annotation"
-    t.string   "hospital"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
-  end
-
   create_table "proposals", force: :cascade do |t|
     t.string   "first_name",   null: false
     t.string   "last_name",    null: false
